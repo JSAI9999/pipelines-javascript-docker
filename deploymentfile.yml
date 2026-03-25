@@ -21,7 +21,7 @@ spec:
         - name: railwaycont
           image: jsaikumar9999/railimg:latest
           ports:
-            - containerPort: 8888
+            - containerPort: 80
 
 ---
 apiVersion: v1
@@ -35,4 +35,4 @@ spec:
     app: railway
   ports:
     - port: 80
-      targetPort: 8888
+      targetPort: 80
