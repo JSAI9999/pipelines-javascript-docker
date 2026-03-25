@@ -74,8 +74,8 @@ pipeline {
             steps {
                 sh """
                 export KUBECONFIG=${KUBECONFIG_PATH}
-                kubectl apply -f deployment.yml
-                kubectl rollout status deployment railway
+                kubectl apply -f deploymentfile.yml
+                kubectl rollout status deployment railwaydeployment
                 """
             }
         }
@@ -90,7 +90,7 @@ pipeline {
                 body: """
 Deployment Successful
 
-Project: Dreamhouse
+Project: railway 
 
 Docker Image:
 ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG}
